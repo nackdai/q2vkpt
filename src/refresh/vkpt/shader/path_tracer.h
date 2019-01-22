@@ -518,6 +518,7 @@ path_tracer()
 			bary.x  = 1.0 - bary.y - bary.z;
 		}
 		else {
+            // Get index of instance and triange which ray hit. 
 			uvec2 v;
 			if(is_dynamic_instance(ray_payload_brdf)) {
 				unpack_instance_id_triangle_idx(
@@ -530,6 +531,10 @@ path_tracer()
 			}
 
 			bary = get_hit_barycentric(ray_payload_brdf);
+
+            // xy : bary centroid
+            // z  : instance id
+            // w  : triangld id
 			vis_buf = vec4(bary.yz, uintBitsToFloat(v));
 
 			if(is_gradient) { /* gradient sample became occluded, mask out */
@@ -545,14 +550,17 @@ path_tracer()
 		material_id    = triangle.material_id;
 		vec2 tex_coord = triangle.tex_coords * bary;
 
+        // クリップスペースにおいてXY方向に微分したものから逆マトリクスを計算することでレイを取得する.
 		/* compute view-space derivatives of depth and clip-space motion vectors */
 		/* cannot use ray-t as svgf expects closest distance to plane */
 		Ray ray_x = get_primary_ray(screen_coord_cs + vec2(2.0 / float(global_ubo.width), 0));
 		Ray ray_y = get_primary_ray(screen_coord_cs - vec2(0, 2.0 / float(global_ubo.height)));
 
+        // 指定された三角形における、上で計算されたレイの重心座標.
 		vec3 bary_x = compute_barycentric(triangle.positions, ray_x.origin, ray_x.direction);
 		vec3 bary_y = compute_barycentric(triangle.positions, ray_y.origin, ray_y.direction);
 
+        // 上で計算された重心座標のworld-space座標.
 		vec3 pos_ws_x= triangle.positions * bary_x;
 		vec3 pos_ws_y= triangle.positions * bary_y;
 
@@ -584,6 +592,7 @@ path_tracer()
 		pos_curr_cs.xy /= pos_curr_cs.z;
 		pos_prev_cs.xy /= pos_prev_cs.z;
 
+        // 結局、depthの微分を取得したいということ？
 		float fwidth_depth = 1.0 / max(1e-4, (abs(depth_vs_x - pos_curr_cs.z) + abs(depth_vs_y - pos_curr_cs.z)));
 
 		vec3 motion = vec3(pos_prev_cs - pos_curr_cs);

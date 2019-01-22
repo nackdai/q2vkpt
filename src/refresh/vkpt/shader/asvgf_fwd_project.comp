@@ -125,6 +125,8 @@ main()
 		imageStore(IMG_ASVGF_RNG_SEED_B, ipos_curr, rng_prev.xxxx);
 	}
 
+    // NOTE
+    // clip-space? It looks like world-space.
 	/* forward-project the clip-space position for handling sub-pixel offsets */
 	imageStore(IMG_ASVGF_POS_WS_FWD, pos_grad, vec4(pos_ws, 0.0));
 

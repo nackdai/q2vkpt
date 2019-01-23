@@ -484,6 +484,8 @@ path_tracer()
 		Ray ray = get_primary_ray(screen_coord_cs);
 
 		if(is_gradient) {
+            // ワールド座標をテクスチャからサンプリングし、レイを作成する.
+            // Forward Projectionにより、前のフレームのワールド座標を参照する可能性もある.
 			/* gradient samples only need to verify visibility but need to
 			 * maintain the precise location */
 			vec3 pos_ws    = texelFetch(TEX_ASVGF_POS_WS_FWD, ipos / GRAD_DWN, 0).xyz; 
@@ -593,6 +595,7 @@ path_tracer()
 		pos_prev_cs.xy /= pos_prev_cs.z;
 
         // 結局、depthの微分を取得したいということ？
+        // http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20081208
 		float fwidth_depth = 1.0 / max(1e-4, (abs(depth_vs_x - pos_curr_cs.z) + abs(depth_vs_y - pos_curr_cs.z)));
 
 		vec3 motion = vec3(pos_prev_cs - pos_curr_cs);

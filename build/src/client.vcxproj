@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{24F9FFEE-26E3-31ED-B354-D38E70A643F2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>client</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\work\q2vkpt\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">client.dir\Debug\</IntDir>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/work/q2vkpt</LocalDebuggerWorkingDirectory>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\work\q2vkpt\build\Bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">client.dir\Release\</IntDir>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/work/q2vkpt</LocalDebuggerWorkingDirectory>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\work\q2vkpt\build\Bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">client.dir\MinSizeRel\</IntDir>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/work/q2vkpt</LocalDebuggerWorkingDirectory>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\work\q2vkpt\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">client.dir\RelWithDebInfo\</IntDir>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/work/q2vkpt</LocalDebuggerWorkingDirectory>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;REF_VKPT=1;USE_REF=1;VID_REF="vkpt";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;PNG_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;REF_VKPT=1;USE_REF=1;VID_REF=\"vkpt\";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;PNG_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vulkan-1.lib;winmm.lib;ws2_32.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\pngd.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\jpegd.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2maind.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2d.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\zlibd.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;dinput8.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work/q2vkpt/.;D:/work/q2vkpt/./$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work/q2vkpt/build/src/Debug/client.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work/q2vkpt/client.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REF_VKPT=1;USE_REF=1;VID_REF="vkpt";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REF_VKPT=1;USE_REF=1;VID_REF=\"vkpt\";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vulkan-1.lib;winmm.lib;ws2_32.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\png.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\jpeg.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2main.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\zlib.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;dinput8.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work/q2vkpt/.;D:/work/q2vkpt/./$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work/q2vkpt/build/src/Release/client.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work/q2vkpt/build/Bin/Release/client.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REF_VKPT=1;USE_REF=1;VID_REF="vkpt";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REF_VKPT=1;USE_REF=1;VID_REF=\"vkpt\";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vulkan-1.lib;winmm.lib;ws2_32.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\pngd.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\jpegd.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2maind.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2d.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\zlibd.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;dinput8.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work/q2vkpt/.;D:/work/q2vkpt/./$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work/q2vkpt/build/src/MinSizeRel/client.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work/q2vkpt/build/Bin/MinSizeRel/client.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REF_VKPT=1;USE_REF=1;VID_REF="vkpt";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REF_VKPT=1;USE_REF=1;VID_REF=\"vkpt\";HAVE_CONFIG_H=1;USE_SERVER=1;USE_CLIENT=1;CURL_STATICLIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work\q2vkpt\src\refresh\vkpt\include;D:\work\q2vkpt\src\..\VC\inc;D:\work\q2vkpt\src\..\inc;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vulkan-1.lib;winmm.lib;ws2_32.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\pngd.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\jpegd.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2maind.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\SDL2d.lib;C:\.hunter\_Base\a376088\af2d90d\28e94d4\Install\lib\zlibd.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;dinput8.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work/q2vkpt/.;D:/work/q2vkpt/./$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work/q2vkpt/build/src/RelWithDebInfo/client.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work/q2vkpt/client.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\work\q2vkpt\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/work/q2vkpt/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/work/q2vkpt -BD:/work/q2vkpt/build --check-stamp-file D:/work/q2vkpt/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/work/q2vkpt/src/CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\work\q2vkpt\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/work/q2vkpt/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/work/q2vkpt -BD:/work/q2vkpt/build --check-stamp-file D:/work/q2vkpt/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/work/q2vkpt/src/CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\work\q2vkpt\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/work/q2vkpt/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/work/q2vkpt -BD:/work/q2vkpt/build --check-stamp-file D:/work/q2vkpt/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/work/q2vkpt/src/CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\work\q2vkpt\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/work/q2vkpt/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/work/q2vkpt -BD:/work/q2vkpt/build --check-stamp-file D:/work/q2vkpt/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/work/q2vkpt/src/CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;D:\work\q2vkpt\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\work\q2vkpt\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ascii.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\console.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\crc.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\demo.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\download.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\effects.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\entities.c">
+      <ObjectFileName>$(IntDir)/client/entities.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\input.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\keys.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\locs.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\main.c">
+      <ObjectFileName>$(IntDir)/client/main.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\newfx.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\parse.c">
+      <ObjectFileName>$(IntDir)/client/parse.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\precache.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\predict.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\refresh.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\screen.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\tent.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\view.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\demos.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\menu.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\playerconfig.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\playermodels.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\script.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\servers.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\ui.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\dma.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\main.c">
+      <ObjectFileName>$(IntDir)/client/sound/main.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\mem.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\mix.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\qal\dynamic.c" />
+    <ClInclude Include="D:\work\q2vkpt\src\client\client.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\client\ui\ui.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\client\sound\sound.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\client\sound\qal\dynamic.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\client\sound\qal\fixed.h" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\bsp.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\cmd.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\cmodel.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\common.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\cvar.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\error.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\field.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\fifo.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\files.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\math.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\mdfour.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\msg.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\pmove.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\prompt.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\sizebuf.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\utils.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\zone.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\net\chan.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\net\net.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\common\x86\fpu.c" />
+    <ClInclude Include="D:\work\q2vkpt\src\common\net\inet_ntop.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\common\net\inet_pton.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\common\net\win.h" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\images.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\models.c">
+      <ObjectFileName>$(IntDir)/refresh/models.c.obj</ObjectFileName>
+    </ClCompile>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf.glsl" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_atrous.comp" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_fwd_project.comp" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_gradient_atrous.comp" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_gradient_img.comp" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_seed_rng.comp" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_taa.comp" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_temporal.comp" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\brdf.glsl" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\global_textures.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\global_ubo.h" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\instance_geometry.comp" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\light_hierarchy.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\light_lists.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.h" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.rchit" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.rgen" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.rmiss" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer_rtx.rchit" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer_rtx.rgen" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer_rtx.rmiss" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\read_visbuf.glsl" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\stretch_pic.frag" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\stretch_pic.vert" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\tiny_encryption_algorithm.h" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\utils.glsl" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\vertex_buffer.h" />
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\water.glsl" />
+    <ClCompile Include="D:\work\q2vkpt\src\shared\m_flash.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\shared\shared.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\windows\ac.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\windows\debug.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\windows\hunk.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\windows\system.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\windows\wave.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\unix\sdl2\video.c" />
+    <ClInclude Include="D:\work\q2vkpt\src\windows\wgl.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\windows\glimp.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\windows\client.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\windows\threads\threads.h" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\commands.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\entities.c">
+      <ObjectFileName>$(IntDir)/server/entities.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\game.c">
+      <ObjectFileName>$(IntDir)/server/game.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\init.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\main.c">
+      <ObjectFileName>$(IntDir)/server/main.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\save.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\send.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\user.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\world.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd\client.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd\parse.c">
+      <ObjectFileName>$(IntDir)/server/mvd/parse.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd\game.c">
+      <ObjectFileName>$(IntDir)/server/mvd/game.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\work\q2vkpt\src\server\server.h" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\asvgf.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\bsp_mesh.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\draw.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\light_hierarchy.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\main.c">
+      <ObjectFileName>$(IntDir)/refresh/vkpt/main.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\matrix.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\models.c">
+      <ObjectFileName>$(IntDir)/refresh/vkpt/models.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\path_tracer.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\profiler.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\stb.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\textures.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\uniform_buffer.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\vertex_buffer.c" />
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\vk_util.c" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\vkpt.h" />
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\vk_util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\work\q2vkpt\build\ZERO_CHECK.vcxproj">
+      <Project>{5B138437-AE60-3BB8-B65B-7E82616D6462}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ascii.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\console.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\crc.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\demo.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\download.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\effects.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\entities.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\input.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\keys.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\locs.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\main.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\newfx.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\parse.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\precache.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\predict.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\refresh.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\screen.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\tent.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\view.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\demos.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\menu.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\playerconfig.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\playermodels.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\script.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\servers.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\ui\ui.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\dma.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\main.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\mem.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\mix.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\client\sound\qal\dynamic.c">
+      <Filter>client\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\bsp.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\cmd.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\cmodel.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\common.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\cvar.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\error.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\field.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\fifo.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\files.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\math.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\mdfour.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\msg.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\pmove.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\prompt.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\sizebuf.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\utils.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\zone.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\net\chan.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\net\net.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\common\x86\fpu.c">
+      <Filter>common\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\images.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\models.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\shared\m_flash.c">
+      <Filter>shared\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\shared\shared.c">
+      <Filter>shared\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\windows\ac.c">
+      <Filter>windows\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\windows\debug.c">
+      <Filter>windows\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\windows\hunk.c">
+      <Filter>windows\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\windows\system.c">
+      <Filter>windows\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\windows\wave.c">
+      <Filter>windows\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\unix\sdl2\video.c">
+      <Filter>windows\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\commands.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\entities.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\game.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\init.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\main.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\save.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\send.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\user.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\world.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd\client.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd\parse.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\server\mvd\game.c">
+      <Filter>server\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\asvgf.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\bsp_mesh.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\draw.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\light_hierarchy.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\main.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\matrix.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\models.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\path_tracer.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\profiler.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\stb.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\textures.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\uniform_buffer.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\vertex_buffer.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work\q2vkpt\src\refresh\vkpt\vk_util.c">
+      <Filter>refresh\sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\work\q2vkpt\src\client\client.h">
+      <Filter>client\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\client\ui\ui.h">
+      <Filter>client\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\client\sound\sound.h">
+      <Filter>client\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\client\sound\qal\dynamic.h">
+      <Filter>client\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\client\sound\qal\fixed.h">
+      <Filter>client\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\common\net\inet_ntop.h">
+      <Filter>common\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\common\net\inet_pton.h">
+      <Filter>common\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\common\net\win.h">
+      <Filter>common\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\global_textures.h">
+      <Filter>refresh\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\global_ubo.h">
+      <Filter>refresh\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\light_hierarchy.h">
+      <Filter>refresh\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\light_lists.h">
+      <Filter>refresh\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.h">
+      <Filter>refresh\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\tiny_encryption_algorithm.h">
+      <Filter>refresh\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\shader\vertex_buffer.h">
+      <Filter>refresh\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\windows\wgl.h">
+      <Filter>windows\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\windows\glimp.h">
+      <Filter>windows\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\windows\client.h">
+      <Filter>windows\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\windows\threads\threads.h">
+      <Filter>windows\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\server\server.h">
+      <Filter>server\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\vkpt.h">
+      <Filter>refresh\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\work\q2vkpt\src\refresh\vkpt\vk_util.h">
+      <Filter>refresh\headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\work\q2vkpt\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf.glsl">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_atrous.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_fwd_project.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_gradient_atrous.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_gradient_img.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_seed_rng.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_taa.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\asvgf_temporal.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\brdf.glsl">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\instance_geometry.comp">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.rchit">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.rgen">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer.rmiss">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer_rtx.rchit">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer_rtx.rgen">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\path_tracer_rtx.rmiss">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\read_visbuf.glsl">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\stretch_pic.frag">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\stretch_pic.vert">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\utils.glsl">
+      <Filter>refresh\shaders</Filter>
+    </None>
+    <None Include="D:\work\q2vkpt\src\refresh\vkpt\shader\water.glsl">
+      <Filter>refresh\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="client">
+      <UniqueIdentifier>{0860DC83-7D78-31C5-8CBF-7720CF584D71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client\headers">
+      <UniqueIdentifier>{6EB0E828-F2C9-3770-A6D8-EFFED70EE36D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client\sources">
+      <UniqueIdentifier>{F70525FE-FB29-3EDE-9802-0DC81F2434C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{A5BF8E15-BA9D-3440-8EED-B3A0E4E98C66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\headers">
+      <UniqueIdentifier>{F316F209-2616-3472-90B3-93C42FBBD59B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\sources">
+      <UniqueIdentifier>{E9203B1A-2754-35D1-B13F-0487B0B7FDF8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="refresh">
+      <UniqueIdentifier>{BD3F04D4-E814-3BE2-8DA9-884FBC84BB2E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="refresh\headers">
+      <UniqueIdentifier>{63F7274C-38C5-3A6D-B5DD-C463FF027260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="refresh\shaders">
+      <UniqueIdentifier>{BE5EA4EC-844F-35F3-ABF3-BEA38FD76537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="refresh\sources">
+      <UniqueIdentifier>{54170486-4E99-34E9-8E9C-B34638DF3E0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{9E5602DF-2B1B-373D-ACEA-BF5C0787DE26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\headers">
+      <UniqueIdentifier>{E7C73004-6A92-310F-9996-BE90EDD5D422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\sources">
+      <UniqueIdentifier>{FADC6632-C9F7-37EB-9D60-378529830B51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shared">
+      <UniqueIdentifier>{BAA76337-B2F3-3A5B-8E90-9BFC6D04C95E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shared\sources">
+      <UniqueIdentifier>{0CF2E25B-0977-3743-BDA0-9173C4AC1F78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows">
+      <UniqueIdentifier>{2B6C965D-3E72-38A2-8DE3-67AED8D83BD8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\headers">
+      <UniqueIdentifier>{911F76E6-7C04-3984-A81C-13994FCD25D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\sources">
+      <UniqueIdentifier>{DFC6C70C-634F-3E00-9997-C94A1C1FF9D3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

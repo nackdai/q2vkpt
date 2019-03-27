@@ -539,7 +539,8 @@ path_tracer()
             // w  : triangld id
 			vis_buf = vec4(bary.yz, uintBitsToFloat(v));
 
-			if(is_gradient) { /* gradient sample became occluded, mask out */
+			if(is_gradient) {
+                /* gradient sample became occluded, mask out */
 				imageStore(IMG_ASVGF_GRAD_SMPL_POS, ipos / GRAD_DWN, uvec4(0));
 			}
 			is_gradient = false;

@@ -1243,14 +1243,17 @@ R_RenderFrame(refdef_t *fd)
 	vkpt_pt_update_descripter_set_bindings(qvk.current_image_index);
 	_VK(vkpt_profiler_query(PROFILER_BVH_UPDATE, PROFILER_STOP));
 
+    // Seed Rng, Forward Projection
 	_VK(vkpt_profiler_query(PROFILER_ASVGF_GRADIENT_SAMPLES, PROFILER_START));
 	vkpt_asvgf_create_gradient_samples(qvk.cmd_buf_current, qvk.frame_counter);
 	_VK(vkpt_profiler_query(PROFILER_ASVGF_GRADIENT_SAMPLES, PROFILER_STOP));
 
+    // Path tracing
 	_VK(vkpt_profiler_query(PROFILER_PATH_TRACER, PROFILER_START));
 	vkpt_pt_record_cmd_buffer(qvk.cmd_buf_current, qvk.frame_counter);
 	_VK(vkpt_profiler_query(PROFILER_PATH_TRACER, PROFILER_STOP));
 
+    // 
 	_VK(vkpt_profiler_query(PROFILER_ASVGF_FULL, PROFILER_START));
 	vkpt_asvgf_record_cmd_buffer(qvk.cmd_buf_current);
 	_VK(vkpt_profiler_query(PROFILER_ASVGF_FULL, PROFILER_STOP));

@@ -64,14 +64,20 @@ main()
 		encrypt_tea(arg);
 		arg %= GRAD_DWN;
 
+        // NOTE
+        // This shader called with 1/3 screen resolution.
+
 		ipos = ivec2(gl_GlobalInvocationID.xy * GRAD_DWN + arg);
 	}
 	//ipos = ivec2(gl_GlobalInvocationID.xy * GRAD_DWN + 1);
 
+    // Not allowed over than framebuffer resolution.
 	if(any(greaterThanEqual(ipos, ivec2(global_ubo.width, global_ubo.height))))
 		return;
 
 	vec4 vis_buf = texelFetch(TEX_PT_VISBUF, ipos, 0);
+
+    // xy is bary centroid, and -1 is invalid value (no hit).
 	if(any(lessThan(vis_buf.xy, vec2(0))))
 		return;
 
@@ -79,6 +85,7 @@ main()
 	if(!visbuf_get_triangle_fwdprj(triangle, vis_buf))
 		return;
 
+    // If triangle's material is light, forward projection will finish.
 	if((triangle.material_id & BSP_FLAG_LIGHT) > 0)
 		return;
 
@@ -111,6 +118,7 @@ main()
 		| (idx_prev      << (STRATUM_OFFSET_SHIFT * 2));/* pos in prev frame */
 
 	/* check if this sample is allowed to become a gradient sample */
+    // If stored data in IMG_ASVGF_GRAD_SMPL_POS at `pos_grad` is equal to `0u`, store `gradient_idx` to IMG_ASVGF_GRAD_SMPL_POS.
 	if(imageAtomicCompSwap(IMG_ASVGF_GRAD_SMPL_POS, pos_grad, 0u, gradient_idx) != 0) {
 		return;
 	}

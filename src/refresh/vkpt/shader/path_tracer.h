@@ -461,6 +461,8 @@ path_tracer()
 
 	{
 		/* box muller transform */
+        // ãƒœãƒƒã‚¯ã‚¹ï¼ãƒŸãƒ¥ãƒ©ãƒ¼æ³•ã¨ã¯ã€ä¸€æ§˜åˆ†å¸ƒã«å¾“ã†ç¢ºç‡å¤‰æ•°ã‹ã‚‰æ¨™æº–æ­£è¦åˆ†å¸ƒã«å¾“ã†ç¢ºç‡å¤‰æ•°ã‚’ç”Ÿæˆã•ã›ã‚‹æ‰‹æ³•.
+        // https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%9D%E3%83%9F%E3%83%A5%E3%83%A9%E3%83%BC%E6%B3%95
 		vec2 pixel_offset = vec2(get_rng(RNG_PRIMARY_OFF_X), get_rng(RNG_PRIMARY_OFF_Y));
 		pixel_offset.x = sqrt(-2.0 * log(pixel_offset.x));
 		pixel_offset = clamp(pixel_offset, vec2(-1), vec2(1)) * 0.5; // temporal filter breaks otherwise
@@ -484,8 +486,8 @@ path_tracer()
 		Ray ray = get_primary_ray(screen_coord_cs);
 
 		if(is_gradient) {
-            // ƒ[ƒ‹ƒhÀ•W‚ğƒeƒNƒXƒ`ƒƒ‚©‚çƒTƒ“ƒvƒŠƒ“ƒO‚µAƒŒƒC‚ğì¬‚·‚é.
-            // Forward Projection‚É‚æ‚èA‘O‚ÌƒtƒŒ[ƒ€‚Ìƒ[ƒ‹ƒhÀ•W‚ğQÆ‚·‚é‰Â”\«‚à‚ ‚é.
+            // ãƒ¯ãƒ¼ãƒ«ãƒ‰åº§æ¨™ã‚’ãƒ†ã‚¯ã‚¹ãƒãƒ£ã‹ã‚‰ã‚µãƒ³ãƒ—ãƒªãƒ³ã‚°ã—ã€ãƒ¬ã‚¤ã‚’ä½œæˆã™ã‚‹.
+            // Forward Projectionã«ã‚ˆã‚Šã€å‰ã®ãƒ•ãƒ¬ãƒ¼ãƒ ã®ãƒ¯ãƒ¼ãƒ«ãƒ‰åº§æ¨™ã‚’å‚ç…§ã™ã‚‹å¯èƒ½æ€§ã‚‚ã‚ã‚‹.
 			/* gradient samples only need to verify visibility but need to
 			 * maintain the precise location */
 			vec3 pos_ws    = texelFetch(TEX_ASVGF_POS_WS_FWD, ipos / GRAD_DWN, 0).xyz; 
@@ -553,17 +555,17 @@ path_tracer()
 		material_id    = triangle.material_id;
 		vec2 tex_coord = triangle.tex_coords * bary;
 
-        // ƒNƒŠƒbƒvƒXƒy[ƒX‚É‚¨‚¢‚ÄXY•ûŒü‚É”÷•ª‚µ‚½‚à‚Ì‚©‚ç‹tƒ}ƒgƒŠƒNƒX‚ğŒvZ‚·‚é‚±‚Æ‚ÅƒŒƒC‚ğæ“¾‚·‚é.
+        // ã‚¯ãƒªãƒƒãƒ—ã‚¹ãƒšãƒ¼ã‚¹ã«ãŠã„ã¦XYæ–¹å‘ã«å¾®åˆ†ã—ãŸã‚‚ã®ã‹ã‚‰é€†ãƒãƒˆãƒªã‚¯ã‚¹ã‚’è¨ˆç®—ã™ã‚‹ã“ã¨ã§ãƒ¬ã‚¤ã‚’å–å¾—ã™ã‚‹.
 		/* compute view-space derivatives of depth and clip-space motion vectors */
 		/* cannot use ray-t as svgf expects closest distance to plane */
 		Ray ray_x = get_primary_ray(screen_coord_cs + vec2(2.0 / float(global_ubo.width), 0));
 		Ray ray_y = get_primary_ray(screen_coord_cs - vec2(0, 2.0 / float(global_ubo.height)));
 
-        // w’è‚³‚ê‚½OŠpŒ`‚É‚¨‚¯‚éAã‚ÅŒvZ‚³‚ê‚½ƒŒƒC‚ÌdSÀ•W.
+        // æŒ‡å®šã•ã‚ŒãŸä¸‰è§’å½¢ã«ãŠã‘ã‚‹ã€ä¸Šã§è¨ˆç®—ã•ã‚ŒãŸãƒ¬ã‚¤ã®é‡å¿ƒåº§æ¨™.
 		vec3 bary_x = compute_barycentric(triangle.positions, ray_x.origin, ray_x.direction);
 		vec3 bary_y = compute_barycentric(triangle.positions, ray_y.origin, ray_y.direction);
 
-        // ã‚ÅŒvZ‚³‚ê‚½dSÀ•W‚Ìworld-spaceÀ•W.
+        // ä¸Šã§è¨ˆç®—ã•ã‚ŒãŸé‡å¿ƒåº§æ¨™ã®world-spaceåº§æ¨™.
 		vec3 pos_ws_x= triangle.positions * bary_x;
 		vec3 pos_ws_y= triangle.positions * bary_y;
 
@@ -595,7 +597,7 @@ path_tracer()
 		pos_curr_cs.xy /= pos_curr_cs.z;
 		pos_prev_cs.xy /= pos_prev_cs.z;
 
-        // Œ‹‹ÇAdepth‚Ì”÷•ª‚ğæ“¾‚µ‚½‚¢‚Æ‚¢‚¤‚±‚ÆH
+        // çµå±€ã€depthã®å¾®åˆ†ã‚’å–å¾—ã—ãŸã„ã¨ã„ã†ã“ã¨ï¼Ÿ
         // http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20081208
 		float fwidth_depth = 1.0 / max(1e-4, (abs(depth_vs_x - pos_curr_cs.z) + abs(depth_vs_y - pos_curr_cs.z)));
 

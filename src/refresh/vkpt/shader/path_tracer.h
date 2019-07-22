@@ -503,6 +503,7 @@ path_tracer()
 		direction = ray.direction;
 
 		if(!found_intersection(ray_payload_brdf) && !is_gradient) {
+            // miss hit && not is_gradient
 			vec3 env = env_map(ray.direction);
 			store_no_hit(env_map(ray.direction), vec3(0));
 			#ifndef RTX
@@ -517,6 +518,7 @@ path_tracer()
 		Triangle triangle;
 		/* reprojection was valid for the gradient sample */
 		if(is_gradient && !found_intersection(ray_payload_brdf)) {
+            // miss hit && is_gradient
 			vis_buf = texelFetch(TEX_ASVGF_VISBUF_FWD, ipos / GRAD_DWN, 0);
 			bary.yz = vis_buf.xy;
 			bary.x  = 1.0 - bary.y - bary.z;

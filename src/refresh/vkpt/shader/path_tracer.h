@@ -558,6 +558,7 @@ path_tracer()
 		vec2 tex_coord = triangle.tex_coords * bary;
 
         // クリップスペースにおいてXY方向に微分したものから逆マトリクスを計算することでレイを取得する.
+        // 2.0 => clip spaceにおいてスクリーン範囲が[-1, 1]で全体で2だから？
 		/* compute view-space derivatives of depth and clip-space motion vectors */
 		/* cannot use ray-t as svgf expects closest distance to plane */
 		Ray ray_x = get_primary_ray(screen_coord_cs + vec2(2.0 / float(global_ubo.width), 0));

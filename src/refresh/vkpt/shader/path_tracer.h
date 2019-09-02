@@ -480,6 +480,9 @@ path_tracer()
 					u >> (STRATUM_OFFSET_SHIFT * 0),
 					u >> (STRATUM_OFFSET_SHIFT * 1)) & STRATUM_OFFSET_MASK;
 
+            // gradient_idxがゼロでない => forward projectionで更新されている.
+            //   stratum(3x3)単位で１ピクセルしか forward projection されない.
+            // grad_strata_posがiposと一致しているか => つまり、validであるかチェック.
 			is_gradient = (u > 0 && all(equal(grad_strata_pos, ipos % GRAD_DWN)));
 		}
 

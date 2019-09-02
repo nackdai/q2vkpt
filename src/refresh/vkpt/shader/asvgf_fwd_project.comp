@@ -85,7 +85,7 @@ main()
 	if(!visbuf_get_triangle_fwdprj(triangle, vis_buf))
 		return;
 
-    // If triangle's material is light, forward projection will finish.
+    // If triangle's material is light, forward projection finish.
 	if((triangle.material_id & BSP_FLAG_LIGHT) > 0)
 		return;
 

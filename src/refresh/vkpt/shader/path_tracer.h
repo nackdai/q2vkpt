@@ -483,6 +483,7 @@ path_tracer()
             // gradient_idxがゼロでない => forward projectionで更新されている.
             //   stratum(3x3)単位で１ピクセルしか forward projection されない.
             // grad_strata_posがiposと一致しているか => つまり、validであるかチェック.
+            //   forward projectionで更新されておらず、不一致の可能性もあるため.
 			is_gradient = (u > 0 && all(equal(grad_strata_pos, ipos % GRAD_DWN)));
 		}
 
@@ -521,20 +522,28 @@ path_tracer()
 		Triangle triangle;
 		/* reprojection was valid for the gradient sample */
 		if(is_gradient && !found_intersection(ray_payload_brdf)) {
+            // is_gradient && ヒットしなかった => 理プロジェクションした結果ヒットしなかったので gradient 成功.
             // miss hit && is_gradient
 			vis_buf = texelFetch(TEX_ASVGF_VISBUF_FWD, ipos / GRAD_DWN, 0);
 			bary.yz = vis_buf.xy;
 			bary.x  = 1.0 - bary.y - bary.z;
 		}
 		else {
+            // (!is_gradient && found_intersection) || (is_gradient && found_intersection)
+            // => found_intersection の場合.
+
             // Get index of instance and triange which ray hit. 
 			uvec2 v;
 			if(is_dynamic_instance(ray_payload_brdf)) {
+                // インスンタンスIDとトライアングルIDを取得する.
+                // dynamic instanceでないと、複数存在しないためインスタンスIDは存在しない?
 				unpack_instance_id_triangle_idx(
 					get_instance_id_instanced(get_primitive(ray_payload_brdf)),
 					v.x, v.y);
 			}
 			else {
+                // static instanceの場合
+                // インスタンスIDは不要なため無効値をセット.
 				v.x = ~0u;
 				v.y = get_primitive(ray_payload_brdf);
 			}
@@ -547,6 +556,8 @@ path_tracer()
 			vis_buf = vec4(bary.yz, uintBitsToFloat(v));
 
 			if(is_gradient) {
+                // is_gradient && ヒットした => 理プロジェクションした結果ヒットしので gradient したものがocckudeされている
+                // => 次に向けてゼロクリアする.
                 /* gradient sample became occluded, mask out */
 				imageStore(IMG_ASVGF_GRAD_SMPL_POS, ipos / GRAD_DWN, uvec4(0));
 			}
@@ -572,6 +583,7 @@ path_tracer()
 		vec3 bary_y = compute_barycentric(triangle.positions, ray_y.origin, ray_y.direction);
 
         // 上で計算された重心座標のworld-space座標.
+        // => 微分されたレイから取得したworld-space座標.
 		vec3 pos_ws_x= triangle.positions * bary_x;
 		vec3 pos_ws_y= triangle.positions * bary_y;
 

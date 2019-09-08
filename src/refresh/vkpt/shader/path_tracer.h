@@ -587,14 +587,27 @@ path_tracer()
 		vec3 pos_ws_x= triangle.positions * bary_x;
 		vec3 pos_ws_y= triangle.positions * bary_y;
 
+        // NOTE
+        // dFdx dFdy textureGrad and texture
+        // https://community.khronos.org/t/dfdx-dfdy-texturegrad-and-texture/61899
+        // dFdxとdFdyでわずか4行のお手軽エッジ検出！
+        // https://qiita.com/gam0022/items/1342a91d0a6b16a3a9ba
+        // Derivatives I: Discontinuities and Gradients
+        // http://hacksoflife.blogspot.com/2011/01/derivatives-i-discontinuities-and.html
+
+        // オリジナルのUV座標との差分 => 微分値.
 		vec2 tex_coord_x = triangle.tex_coords * bary_x;
 		vec2 tex_coord_y = triangle.tex_coords * bary_y;
 		tex_coord_x -= tex_coord;
 		tex_coord_y -= tex_coord;
 
+        // textureGradは2x2で計算するから?
 		tex_coord_x *= 0.5;
 		tex_coord_y *= 0.5;
 
+        // NOTE
+        // tex2DGrad
+        // https://github.com/pathscale/nvidia_sdk_samples/blob/master/matrixMul/build/cuda/5.0.35-13978363_x64/include/texture_fetch_functions.h
 		primary_albedo = global_textureGrad(triangle.material_id, tex_coord, tex_coord_x, tex_coord_y).rgb * ALBEDO_MULT;
 
 		vec3 pos_ws_curr = position, pos_ws_prev;
@@ -603,7 +616,11 @@ path_tracer()
 			bary.yz = vis_buf.xy;
 			bary.x  = 1.0 - bary.y - bary.z;
 			Triangle t_prev;
+
+            // 前のフレームの三角形所不応を取得.
 			visbuf_get_triangle_backprj(t_prev, vis_buf);
+
+            // 前のフレームのワールド座標.
 			pos_ws_prev = t_prev.positions * bary;
 		}
 
@@ -615,10 +632,13 @@ path_tracer()
 		pos_curr_cs.xy /= pos_curr_cs.z;
 		pos_prev_cs.xy /= pos_prev_cs.z;
 
-        // 結局、depthの微分を取得したいということ？
-        // http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20081208
+        // fwidth
+        // https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/fwidth.xhtml
+        // https://qiita.com/gam0022/items/1342a91d0a6b16a3a9ba
+        // https://computergraphics.stackexchange.com/questions/61/what-is-fwidth-and-how-does-it-work
 		float fwidth_depth = 1.0 / max(1e-4, (abs(depth_vs_x - pos_curr_cs.z) + abs(depth_vs_y - pos_curr_cs.z)));
 
+        // Motion Vector
 		vec3 motion = vec3(pos_prev_cs - pos_curr_cs);
 
 		if(is_water(material_id)) {

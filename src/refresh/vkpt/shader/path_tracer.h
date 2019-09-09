@@ -522,7 +522,7 @@ path_tracer()
 		Triangle triangle;
 		/* reprojection was valid for the gradient sample */
 		if(is_gradient && !found_intersection(ray_payload_brdf)) {
-            // is_gradient && ヒットしなかった => 理プロジェクションした結果ヒットしなかったので gradient 成功.
+            // is_gradient && ヒットしなかった => リプロジェクションした結果ヒットしなかったので gradient 成功.
             // miss hit && is_gradient
 			vis_buf = texelFetch(TEX_ASVGF_VISBUF_FWD, ipos / GRAD_DWN, 0);
 			bary.yz = vis_buf.xy;
@@ -617,7 +617,7 @@ path_tracer()
 			bary.x  = 1.0 - bary.y - bary.z;
 			Triangle t_prev;
 
-            // 前のフレームの三角形所不応を取得.
+            // 前のフレームの三角形情報を取得.
 			visbuf_get_triangle_backprj(t_prev, vis_buf);
 
             // 前のフレームのワールド座標.

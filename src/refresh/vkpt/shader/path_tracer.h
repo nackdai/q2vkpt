@@ -556,7 +556,7 @@ path_tracer()
 			vis_buf = vec4(bary.yz, uintBitsToFloat(v));
 
 			if(is_gradient) {
-                // is_gradient && ヒットした => 理プロジェクションした結果ヒットしので gradient したものがocckudeされている
+                // is_gradient && ヒットした => リプロジェクションした結果ヒットしのでgradientしたものがoccludeされている
                 // => 次に向けてゼロクリアする.
                 /* gradient sample became occluded, mask out */
 				imageStore(IMG_ASVGF_GRAD_SMPL_POS, ipos / GRAD_DWN, uvec4(0));
